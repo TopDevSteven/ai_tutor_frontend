@@ -24,7 +24,7 @@ const MessageInput = ({ activetab }) => {
       console.log(selectedMethod);
 
       const xhr = new XMLHttpRequest();
-      xhr.open("POST", "/api/query", true);
+      xhr.open("POST", "/api/query/", true);
       xhr.setRequestHeader("Content-Type", "application/json");
       xhr.onprogress = () => {
         const rawResult = xhr.responseText;

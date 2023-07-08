@@ -23,7 +23,7 @@ const WorkingArea = () => {
     const handleClickTab = async (tab) => {
         if (tab === "topbar-tab2"){
             setActivetab(tab)
-            const response = await fetch("/api/lesson_style", {
+            const response = await fetch("/api/lesson_style/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
