@@ -26,6 +26,12 @@ const MessageInput = ({ activetab }) => {
       const xhr = new XMLHttpRequest();
       xhr.open("POST", "/api/query/", true);
       xhr.setRequestHeader("Content-Type", "application/json");
+      // Get the user_id from cookies
+        const user_id = document.cookie.replace(/(?:(?:^|.*;\s*)user_id\s*=\s*([^;]*).*$)|^.*$/, "$1");
+
+        // Set the user_id as a cookie header
+        xhr.setRequestHeader("Cookie", `user_id=${user_id}`);
+
       xhr.onprogress = () => {
         const rawResult = xhr.responseText;
         let temp = "";
