@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import LessonButton from "./LessonButton";
-import { LessonContext } from "../dashboard/WorkingArea";
+import { LessonContext } from "../dashboard/lessonapp_area/LessonArea";
 
 const LessonBtnGroup = ({topic, labels}) => {
     const { eduStyle, setEduStyle } = useContext(LessonContext)

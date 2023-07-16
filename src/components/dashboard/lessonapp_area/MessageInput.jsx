@@ -3,7 +3,7 @@ import { ReactComponent as MessageInputIcon } from "../../../assets/icons/microp
 import { ReactComponent as MessageSendIcon } from "../../../assets/icons/paper-plane.svg";
 import NormalButton from "../../common/NormalButton";
 import "./MessageInput.css";
-import { LessonContext } from "../WorkingArea";
+import { LessonContext } from "./LessonArea";
 
 const commendStyles = ["Plannned", "Start", "Continue", "Test"];
 const commendMethod = ["/plan", "/start", "/continue", "/test"];
@@ -21,16 +21,14 @@ const MessageInput = ({ activetab }) => {
 
   const handleSendMessage = async () => {
     if (activetab != "topbar-tab1") {
-      console.log(selectedMethod);
-
       const xhr = new XMLHttpRequest();
       xhr.open("POST", "/api/query/", true);
       xhr.setRequestHeader("Content-Type", "application/json");
       // Get the user_id from cookies
-        const user_id = document.cookie.replace(/(?:(?:^|.*;\s*)user_id\s*=\s*([^;]*).*$)|^.*$/, "$1");
+      const user_id = document.cookie.replace(/(?:(?:^|.*;\s*)user_id\s*=\s*([^;]*).*$)|^.*$/, "$1");
 
-        // Set the user_id as a cookie header
-        xhr.setRequestHeader("Cookie", `user_id=${user_id}`);
+      // Set the user_id as a cookie header
+      xhr.setRequestHeader("Cookie", `user_id=${user_id}`);
 
       xhr.onprogress = () => {
         const rawResult = xhr.responseText;

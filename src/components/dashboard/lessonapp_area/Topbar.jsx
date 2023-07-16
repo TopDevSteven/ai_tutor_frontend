@@ -3,7 +3,7 @@ import "./Topbar.css"
 import {ReactComponent as ShareIcon} from "../../../assets/icons/share.svg"
 import {ReactComponent as ArtificiumIcon} from "../../../assets/icons/artificium.svg"
 import {ReactComponent as FolderIcon} from "../../../assets/icons/folder.svg"
-import { LessonContext } from "../WorkingArea";
+import { LessonContext } from "./LessonArea";
 
 const Topbar = ({activetab, onClick}) => {
     const { eduStyle } = useContext(LessonContext);
@@ -26,7 +26,7 @@ const Topbar = ({activetab, onClick}) => {
             </div>
             <div className="topbar-navigation">
                 <div className="topbar-tab1">
-                    <a href="#" onClick={() => onClick("topbar-tab1")}><ArtificiumIcon className="tab1-icon"/>Type of Class</a>
+                    <a href="#" onClick={() => onClick("topbar-tab1")}><span><ArtificiumIcon className="tab1-icon"/></span>Type of Class</a>
                 </div>
                 <div className="topbar-tab2">
                     <a href="#" onClick={() => onClick("topbar-tab2")}><FolderIcon className="tab2-icon"/>

@@ -1,9 +1,9 @@
 import React, { createContext, useState } from "react";
-import Topbar from "./workingarea/Topbar";
-import LessonChat from "./workingarea/LessonChat";
-import ChatUI from "./workingarea/ChatUI";
-import MessageInput from "./workingarea/MessageInput";
-import "./WorkingArea.css"
+import Topbar from "./Topbar";
+import LessonChat from "./LessonChat";
+import ChatUI from "./ChatUI";
+import MessageInput from "./MessageInput";
+import "./LessonArea.css"
 
 export const LessonContext = createContext();
 
@@ -46,23 +46,25 @@ const WorkingArea = () => {
     }
 
     return (
-        <div className="working-area">
-            <LessonContext.Provider 
-            value={{ 
-                eduStyle, setEduStyle, 
-                userMessage, setUserMessage,
-                messageHistory, setMessageHistory
-            }}
-            >
-                <Topbar 
-                    activetab={activetab}
-                    onClick={handleClickTab}
-                />
-                {activetab === "topbar-tab1" ? <LessonChat /> : <ChatUI />}
-                <div className="input-container">
-                    <MessageInput activetab={activetab}/>
-                </div>
-            </LessonContext.Provider>
+        <div className="workarea-container">
+            <div className="working-area">
+                <LessonContext.Provider 
+                value={{ 
+                    eduStyle, setEduStyle, 
+                    userMessage, setUserMessage,
+                    messageHistory, setMessageHistory
+                }}
+                >
+                    <Topbar 
+                        activetab={activetab}
+                        onClick={handleClickTab}
+                    />
+                    {activetab === "topbar-tab1" ? <LessonChat /> : <ChatUI />}
+                    <div className="input-container">
+                        <MessageInput activetab={activetab}/>
+                    </div>
+                </LessonContext.Provider>
+            </div>
         </div>
     )
 }

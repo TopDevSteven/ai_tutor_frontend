@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import BotIcon from "../../assets/icons/Avatar.png";
 import "./BotMessage.css"
-import { LessonContext } from "../dashboard/WorkingArea";
+import { LessonContext } from "../dashboard/lessonapp_area/LessonArea";
 
 const BotMessage = ({respond}) => {
     const { eduStyle, setEduStyle } = useContext(LessonContext);

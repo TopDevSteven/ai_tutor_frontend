@@ -1,0 +1,5 @@
+.gpthub-topbar-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

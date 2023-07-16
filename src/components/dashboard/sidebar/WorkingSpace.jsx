@@ -6,6 +6,7 @@ import {ReactComponent as OctagonIcon} from "../../../assets/icons/octagon.svg"
 import {ReactComponent as AnalyticsIcon} from "../../../assets/icons/dashbaord.svg"
 import {ReactComponent as PerformanceIcon} from "../../../assets/icons/Star.svg"
 import {ReactComponent as TestlabIcon} from "../../../assets/icons/bulb.svg"
+import { Link } from "react-router-dom";
 
 const WorkingSpace = () => {
     return (
@@ -16,8 +17,12 @@ const WorkingSpace = () => {
                 </div>
                 <div className="learning-list-container">
                     <ul className="learning-list">
-                        <li><a href="#" className="menu-btn-standard"><SquareIcon className="learn-icon"/>Learning App</a></li>
-                        <li><a href="#" className="menu-btn-standard"><TriangleIcon className="gpthub_icon"/>GPT-Hub</a></li>
+                        <li>
+                            <Link to={"/userdashboard/lesson_app"} className="menu-btn-standard"><SquareIcon className="learn-icon"/>Learning App</Link>
+                        </li>
+                        <li>
+                            <Link to={"/userdashboard/gpt_hub"} className="menu-btn-standard"><TriangleIcon className="gpthub_icon"/>GPT-Hub</Link>
+                        </li>
                         <li><a href="#" className="menu-btn-standard"><SquareIcon className="personal_ai_icon"/>Personal AI-GPT</a></li>
                         <li><a href="#" className="menu-btn-standard"><OctagonIcon className="booking_icon"/>Exam Booking App</a></li>
                     </ul>

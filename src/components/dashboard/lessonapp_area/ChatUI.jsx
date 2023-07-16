@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import BotMessage from "../../common/BotMessage";
 import UserMessage from "../../common/UserMessage";
-import { LessonContext } from "../WorkingArea";
+import { LessonContext } from "./LessonArea";
 import "./ChatUI.css"
 
 

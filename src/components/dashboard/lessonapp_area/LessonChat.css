@@ -21,6 +21,7 @@
 }
 
 .group-icon {
+    fill: none;
     width: 53px;
     height: 53px;
     display: flex;
