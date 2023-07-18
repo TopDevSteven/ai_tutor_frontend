@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import {ReactComponent as ArrowIcon} from "../../assets/icons/arrow-right.svg"
+import {ReactComponent as ArrowIcon} from "../../../assets/icons/arrow-right.svg"
 import "./LessonButton.css"
 
 const LessonButton = ({label, isSelected, onClick}) => {

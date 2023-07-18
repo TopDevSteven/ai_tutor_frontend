@@ -1,5 +1,5 @@
 import React from "react";
-import LessonBtnGroup from "../../common/LessonBtnGroup";
+import LessonBtnGroup from "../../common/lessonapp_commons/LessonBtnGroup";
 import { ReactComponent as DepthIcon} from "../../../assets/icons/comment-circle.svg"
 import { ReactComponent as LearningStyleIcon} from "../../../assets/icons/edit.svg"
 import { ReactComponent as CommunicStyleIcon} from "../../../assets/icons/chart.svg"

@@ -1,55 +1,31 @@
 import React from "react";
 import "./GpthubCategorySection.css"
-import GptHubCategoryBox from "../../common/GptHubCategoryBox";
+import GptHubCategoryBox from "../../common/gpthub_commons/GptHubCategoryBox";
 import GptHubTopbar from "./GptHubTopbar";
-import {ReactComponent as MathIcon} from "../../../assets/icons/gpthub-math.svg"
-import {ReactComponent as ScienceIcon} from "../../../assets/icons/science.svg"
+import {ReactComponent as PresentationIcon} from "../../../assets/icons/gpthub_cards_icons/magic-wand.svg"
+import {ReactComponent as BlogIcon} from "../../../assets/icons/gpthub_cards_icons/chat-bubble.svg"
 import {ReactComponent as GptHubCodeIcon} from "../../../assets/icons/gpthub-code.svg"
-import {ReactComponent as GptHubHistoryIcon} from "../../../assets/icons/gpthub-history.svg"
-import {ReactComponent as GptHubArtIcon} from "../../../assets/icons/gpthub-art.svg"
-import {ReactComponent as GptHubMusicIcon} from "../../../assets/icons/gpthub-music.svg"
-import {ReactComponent as GptHubCategoryIcon} from "../../../assets/icons/gpthub-category.svg"
-import {ReactComponent as GptHubAllchatIcon} from "../../../assets/icons/gpthub-allchats.svg"
+import {ReactComponent as ImageIcon} from "../../../assets/icons/gpthub_cards_icons/image.svg"
 
 const gpthubScienceCategories = [
-    { 
-        icon: <MathIcon />,
-        category: "Math",
-        explain: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor ."
-    },
-    { 
-        icon: <ScienceIcon />,
-        category: "Science",
-        explain: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor ."
-    },
     { 
         icon: <GptHubCodeIcon />,
         category: "Coding",
         explain: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor ."
     },
     { 
-        icon: <span><GptHubHistoryIcon /></span>,
-        category: "History",
+        icon: <PresentationIcon />,
+        category: "Presentation",
         explain: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor ."
     },
     { 
-        icon: <GptHubArtIcon />,
-        category: "Art",
+        icon: <BlogIcon />,
+        category: "Blog Content",
         explain: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor ."
     },
     { 
-        icon: <GptHubMusicIcon />,
-        category: "Music",
-        explain: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor ."
-    },
-    { 
-        icon: <span><GptHubCategoryIcon /></span>,
-        category: "Category",
-        explain: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor ."
-    },
-    { 
-        icon: <GptHubAllchatIcon />,
-        category: "AllChats",
+        icon: <ImageIcon />,
+        category: "Image",
         explain: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor ."
     }
 ]

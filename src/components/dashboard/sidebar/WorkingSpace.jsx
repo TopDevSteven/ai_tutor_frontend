@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./WorkingSpace.css"
 import {ReactComponent as SquareIcon} from "../../../assets/icons/square.svg"
 import {ReactComponent as TriangleIcon} from "../../../assets/icons/triangle.svg"
@@ -9,6 +9,11 @@ import {ReactComponent as TestlabIcon} from "../../../assets/icons/bulb.svg"
 import { Link } from "react-router-dom";
 
 const WorkingSpace = () => {
+    const [selected, setSelected] = useState(1)
+
+    const handleSidbar = (index) => {
+        setSelected(index)
+    }
     return (
         <div className="working-container">
             <div className="learning-container">
@@ -18,12 +23,14 @@ const WorkingSpace = () => {
                 <div className="learning-list-container">
                     <ul className="learning-list">
                         <li>
-                            <Link to={"/userdashboard/lesson_app"} className="menu-btn-standard"><SquareIcon className="learn-icon"/>Learning App</Link>
+                            <Link to={"/userdashboard/lesson_app"} onClick={() => setSelected(0)} className={`menu-btn-standard ${selected === 0 ? 'active': ''}`}><SquareIcon className="learn-icon"/>Learning App</Link>
                         </li>
                         <li>
-                            <Link to={"/userdashboard/gpt_hub"} className="menu-btn-standard"><TriangleIcon className="gpthub_icon"/>GPT-Hub</Link>
+                            <Link to={"/userdashboard/gpt_hub"} onClick={() => setSelected(1)} className={`menu-btn-standard ${selected === 1 ? 'active': ''}`}><TriangleIcon className="gpthub_icon"/>GPT-Hub</Link>
                         </li>
-                        <li><a href="#" className="menu-btn-standard"><SquareIcon className="personal_ai_icon"/>Personal AI-GPT</a></li>
+                        <li>
+                            <Link to={"/userdashboard/personal_ai"} onClick={() => setSelected(2)} className={`menu-btn-standard ${selected === 2 ? 'active': ''}`}><SquareIcon className="personal_ai_icon"/>Personal AI-GPT</Link>
+                        </li>
                         <li><a href="#" className="menu-btn-standard"><OctagonIcon className="booking_icon"/>Exam Booking App</a></li>
                     </ul>
                 </div>

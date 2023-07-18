@@ -13,7 +13,7 @@ const gpthubEndpoints = [
     'history',
     'art',
     'music',
-    'category',
+    'travel',
     'allchats'
 ]
 

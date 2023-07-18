@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ReactComponent as MessageInputIcon } from "../../../assets/icons/microphone.svg";
 import { ReactComponent as MessageSendIcon } from "../../../assets/icons/paper-plane.svg";
-import NormalButton from "../../common/NormalButton";
+import NormalButton from "../../common/lessonapp_commons/NormalButton";
 import "./MessageInput.css";
 import { LessonContext } from "./LessonArea";
 
